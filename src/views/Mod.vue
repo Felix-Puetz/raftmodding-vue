@@ -4,7 +4,11 @@
          description="makes all tools and equipment more durable"
          :likes="11"
          :downloads="10248"
-         :readme="modReadme"/>
+         :readme="modReadme"
+         category="fun"
+         version="2.1"
+         author="zer0"
+         source-code="#"/>
   </div>
 </template>
 
@@ -14,7 +18,7 @@ import Mod from '@/components/Mod.vue'
 import modReadme from '@/assets/mod-readme.js'
 
 export default Vue.extend({
-  name: 'Home',
+  name: 'ModView',
   components: { Mod },
   data () {
     return {

@@ -7,11 +7,13 @@
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav class="mr-auto">
-          <b-nav-item to="home" class="mx-2">
-            <icon name="bolt"/>Mod Loader
+          <b-nav-item :to="{name: 'mod-loader'}" class="mx-2">
+            <icon name="bolt"/>
+            Mod Loader
           </b-nav-item>
-          <b-nav-item to="home" class="mx-2">
-            <icon name="plug"/>Mods
+          <b-nav-item :to="{name: 'mod'}" class="mx-2">
+            <icon name="plug"/>
+            Mods
           </b-nav-item>
         </b-navbar-nav>
         <b-navbar-nav class="ml-auto align-items-center">
@@ -25,7 +27,8 @@
             <icon name="donate"/>
           </b-nav-item>
           <b-nav-item to="home" class="mx-2">
-            <icon name="user"/> Account
+            <icon name="user"/>
+            Account
           </b-nav-item>
           <b-nav-item to="home" class="mx-2">
             <icon name="plus-circle" size="2x"/>

@@ -36,6 +36,12 @@ body,
     .card {
       background-color: #212529;
     }
+
+    .list-group {
+      .list-group-item {
+        background-color: #212529;
+      }
+    }
   }
 }
 </style>
