@@ -1,31 +1,40 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+  <div id="app" class="d-flex flex-column justify-content-between" :class="[`${theme}-theme`]">
+    <main-nav></main-nav>
     <router-view/>
   </div>
 </template>
 
+<script lang="ts">
+import Vue from 'vue'
+import MainNav from '@/components/MainNav.vue'
+
+export default Vue.extend({
+  components: { MainNav },
+  data () {
+    return {
+      theme: 'dark'
+    }
+  }
+})
+</script>
+
 <style lang="scss">
+html,
+body,
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  min-height: 100%;
 }
 
-#nav {
-  padding: 30px;
+#app {
+  min-height: 100%;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+  &.dark-theme {
+    background-color: #343a40;
+    color: #dee2e6;
 
-    &.router-link-exact-active {
-      color: #42b983;
+    .card {
+      background-color: #212529;
     }
   }
 }
